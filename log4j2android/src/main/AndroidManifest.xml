@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is a dummy file needed to ensure gradle validates and builds ok -->
+<manifest package="com.github.dant3.log4j2android"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <provider
+                android:authorities="${applicationId}.AndroidConfigurationContentProvider"
+                android:exported="false"
+                android:enabled="true"
+                android:name="org.apache.logging.log4j.core.AndroidConfigurationContentProvider" />
+    </application>
+</manifest>

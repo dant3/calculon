@@ -1,0 +1,3 @@
+include ':rxvar', ':rxdroid', ':bundler', ':log4j2android', ':settingsdsl', ':androidexecutors'
+include ':xmltvparser'
+include 'tvapp'

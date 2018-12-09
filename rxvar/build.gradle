@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.2.71'
+}
+apply plugin: 'java-library'
+
+version = "0.1"
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile "io.reactivex.rxjava2:rxkotlin:2.1.0"
+}
+
+sourceCompatibility = "6"
+targetCompatibility = "6"
+repositories {
+    mavenCentral()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.6"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.6"
+    }
+}

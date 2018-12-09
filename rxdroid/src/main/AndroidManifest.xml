@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is a dummy file needed to ensure gradle validates and builds ok -->
+<manifest package="com.github.dant3.rxdroid"/>

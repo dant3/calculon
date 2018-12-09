@@ -1,0 +1,50 @@
+buildscript {
+    ext.kotlin_version = '1.2.61'
+
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main/java', 'src/main/kotlin']
+            }
+        }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+}
+apply from: '../makejar.gradle'
+
+def log4j2version = "2.1"
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api "org.apache.logging.log4j:log4j-api:$log4j2version"
+    api "org.apache.logging.log4j:log4j-core:$log4j2version"
+    annotationProcessor "org.apache.logging.log4j:log4j-core:$log4j2version"
+}
